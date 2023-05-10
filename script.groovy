@@ -8,7 +8,7 @@ def buildImage() {
     withCredentials([usernamePassword(credentialsId: 'docke-id', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
         sh 'docker build -t jollyomere/demo:demobuild-1.0 .'
         sh "echo $PASS | docker login -u $USER --password-stdin"
-        sh 'docker push jollyomere/demo:jma-1.0'
+        sh 'docker push jollyomere/demo:demobuild-1.0'
     }
 } 
 
