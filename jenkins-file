@@ -1,4 +1,11 @@
+#!/usr/bin/env groovy
+
 def gv
+
+pipeline {
+    agent any
+    tools {
+        maven 'Maven'
 
 pipeline {
     agent any
